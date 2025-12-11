@@ -22,3 +22,6 @@ jobs:
         with:
           name: zap_report
           path: zap_report.html
+
+      - name: Copy report to /var/www/html/zap_report.html
+        run: cp zap_report.html /var/www/html/
