@@ -11,7 +11,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: Run ZAP Baseline Scan
         run: |
@@ -20,7 +20,7 @@ jobs:
             zap-baseline.py -t http://192.168.110.206/DVWA -r zap_report.html
 
       - name: Upload ZAP Report
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: zap-report
           path: zap_report.html
